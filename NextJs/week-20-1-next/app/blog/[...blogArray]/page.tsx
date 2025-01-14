@@ -1,7 +1,7 @@
-export default async function ({ params }: {
-  params: {
-    blogArray: Array<any>
-  }
+export default async function blogArray({ params }: {
+  params: Promise<{
+    blogArray: Array<string>
+  }>
 }) {
   const postId = (await params).blogArray;
 

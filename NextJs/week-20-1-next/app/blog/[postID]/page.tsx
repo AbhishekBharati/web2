@@ -1,9 +1,9 @@
 import axios from "axios";
 
-export default async function ({ params }: {
-  params: {
+export default async function postId({ params }: {
+  params: Promise<{
     postID: string
-  }
+  }>
 }) {
   const postId = (await params).postID;
   const response = await axios.get(`https://jsonplaceholder.typicode.com/posts/${postId}`);
